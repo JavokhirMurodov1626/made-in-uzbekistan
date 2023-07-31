@@ -1,0 +1,55 @@
+{% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+{{ 'component-collection-hero-alternate.scss.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign background_color = section.settings.background_color
+  assign background_image = section.settings.background_image
+%}
+
+
+<div 
+  class="collection-hero-alternate"
+>
+  <div class="collection-hero-alternate__top page-width-desktop">
+    <div class="collection-hero-alternate__collection-title">
+      {{ collection.title }}
+      <span>{{ collection.all_products_count }} {{ 'templates.search.products' | t }}</span>
+    </div>
+  </div>
+  <div class="collection-hero-alternate__bottom"  style="{%- if background_image -%}background-image: url('{{ background_image | image_url: width: background_image.width }}');{%- endif -%} background-color: {{background_color}};">
+    <div class="page-width page-width--narrow">
+      <h1 class="collection-hero-alternate__title">
+        <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
+        {%- if collection.metafields.custom.logo -%}    
+          <img src="{{ collection.metafields.custom.logo | file_url }}" alt="" />
+        {% else %}
+          {{- collection.title | escape -}}
+        {%- endif -%}
+      </h1>
+      <div class="collection-hero-alternate__description rte">
+        {{ collection.description }}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Col. Banner - Alternate",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "default": "#27AE60",
+      "label": "Background Color"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    }
+  ]
+}
+{% endschema %}

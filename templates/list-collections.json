@@ -1,0 +1,82 @@
+{
+  "sections": {
+    "main": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "made-in-uzbekistan",
+            "background_overlay_opacity": 30
+          }
+        },
+        "collection-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "iloveuzb",
+            "background_overlay_opacity": 30
+          }
+        },
+        "collection-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "toshkent",
+            "background_overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "collection-1",
+        "collection-2",
+        "collection-3"
+      ],
+      "settings": {
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Made In Uzbekistan<\/p>",
+            "heading_size": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This store was built by the graduates of Applied University. This store donates its proceeds to the school to continue to educate the young people of Uzbekistan. Our goal is to empower the youth of Uzbekistan and become productive members of the global ecosystem. When you buy, wear and gift Made In Uzbekistan, you feel great. You know why? Because you love Uzbekistan. You miss it. But now you are also support it. Go ahead feel great. Feel Uzbek.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "collections-list": {
+      "type": "main-list-collections",
+      "settings": {
+        "title": "All collections",
+        "sort": "alphabetical",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "columns_mobile": "2"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text",
+    "collections-list"
+  ]
+}

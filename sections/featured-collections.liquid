@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="{{ 'section-featured-collections.scss.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'section-featured-collections.scss.css' | asset_url | stylesheet_tag }}</noscript>
+
+<div class="miu-featured-collections__grid">
+  {%- for block in section.blocks -%}
+    {%- if block.settings.collection and block.settings.collection.metafields.custom.logo -%}
+      <a 
+        href="{{ block.settings.collection.url }}"
+        class="miu-featured-collection-card" 
+        {{ block.shopify_attributes }}
+      >
+        <div class="miu-featured-collection-card__overlay" style="opacity: {{ block.settings.background_overlay_opacity | divided_by: 100.0 }};"></div>
+        <div class="miu-featured-collection-card__background">
+          {{ block.settings.collection.featured_image | image_url: width: 1500 | image_tag: loading: 'lazy' }}
+        </div>
+        <div class="miu-featured-collection-card__image">
+          <img src="{{ block.settings.collection.metafields.custom.logo | file_url }}" alt="" />
+        </div>
+      </a>
+    {%- endif -%}
+  {%- endfor -%}
+</div>
+
+{% schema %}
+{
+  "name": "Featured collections",
+  "tag": "section",
+  "class": "section miu-featured-collections",
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Select collection*",
+          "info": "required"
+        },
+        {
+          "type": "range",
+          "id": "background_overlay_opacity",
+          "min": 0,
+          "max": 100,
+          "step": 10,
+          "unit": "%",
+          "label": "Background Overlay",
+          "default": 0
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom - Featured Collections",
+      "category" : "Featured Collections"
+    }
+  ]
+}
+{% endschema %}
