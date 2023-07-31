@@ -147,6 +147,7 @@
 }
 
 .footer-block__heading {
+  text-align: center;
   margin-bottom: 2rem;
   margin-top: 0;
   font-size: calc(var(--font-heading-scale) * 1.6rem);
@@ -154,9 +155,17 @@
 .footer-block ul{
   padding:0;
 }
+.footer-block ul{
+  padding:0;
+}
 
+.footer-block .information-list__item{
+  text-align: center;
+  
+}
 .list-social__item a{
   display: flex;
+  justify-content: center;
   gap: 15px;
   text-decoration: none;
 }
