@@ -59,6 +59,7 @@
               {%- endif -%}
 
               {%- case block.type -%}
+
                 {%- when 'social_links' -%}
                   <ul role="list">
                     {%- if settings.social_instagram_link != blank -%}
@@ -69,6 +70,18 @@
                         </a>
                       </li>
                     {%- endif -%}  
+                  </ul>
+
+                {%- when 'info' -%}
+                  {%- if block.settings.info_heading != blank -%}
+                    <h2 class="footer-block__heading">{{- block.settings.info_heading | escape -}}</h2>
+                  {%- endif -%}
+                  <ul class="information-list">
+                    {%- if block.settings.info__list-item != blank -%}
+                      <li class="information-list__item">
+                          {{block.settings.info__list-item}}</span>
+                      </li>
+                    {%- endif -%}
                   </ul>
 
                 {% when 'mission' %}
@@ -314,20 +327,38 @@
       ]
     },
     {
+      "type": "info",
+      "name": "Information",
+      "settings": [
+        {
+          "type": "text",
+          "id": "info_heading",
+          "default": "Heading",
+          "label": "Information block heading name"
+        },
+        {
+          "type": "text",
+          "id": "info__list-item",
+          "default": "email",
+          "label": "Information blok item"
+        }
+      ]
+    },
+    {
       "type": "mission",
-      "name": "t:sections.footer.blocks.mission.name",
+      "name": "Mission of Group",
       "settings": [
         {
           "type": "text",
           "id": "heading",
           "default": "Heading",
-          "label": "t:sections.footer.blocks.mission.settings.heading.label"
+          "label": "Group Mission Block Heading Name"
         },
         {
           "type": "richtext",
           "id": "subtext",
           "default": "<p>Share contact information, store details, and brand content with your customers.</p>",
-          "label": "t:sections.footer.blocks.mission.settings.subtext.label"
+          "label": "Group Mission Block Richtext"
         }
       ]
     }
