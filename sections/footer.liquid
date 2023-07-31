@@ -84,8 +84,6 @@
                     {%- endif -%}
                   </ul>
 
-                {% when 'mission' %}
-                  <div>{{ block.settings.subtext }}</div>
                 {%- endcase -%}
             </div>
           {%- endfor -%}
@@ -343,24 +341,6 @@
           "label": "Information blok item"
         }
       ]
-    },
-    {
-      "type": "mission",
-      "name": "Mission of Group",
-      "settings": [
-        {
-          "type": "text",
-          "id": "heading",
-          "default": "Heading",
-          "label": "Group Mission Block Heading Name"
-        },
-        {
-          "type": "richtext",
-          "id": "subtext",
-          "default": "<p>Share contact information, store details, and brand content with your customers.</p>",
-          "label": "Group Mission Block Richtext"
-        }
-      ]
     }
   ],
   "settings": [
@@ -490,17 +470,7 @@
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
     }
-  ],
-  "default": {
-    "blocks": [
-      {
-        "type":"social_links"
-      },
-      {
-        "type": "mission"
-      }
-    ]
-  }
-    
+  ]
+  
 }
 {% endschema %}
