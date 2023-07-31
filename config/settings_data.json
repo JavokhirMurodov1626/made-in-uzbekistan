@@ -39,6 +39,25 @@
       },
       "footer": {
         "type": "footer",
+        "blocks": {
+          "43e2588f-11b0-4add-a528-fb9f1af47b4f": {
+            "type": "social_links",
+            "settings": {
+              "heading": "Socials"
+            }
+          },
+          "81616d29-a8e3-4d90-b4ff-098b4968ec1b": {
+            "type": "info",
+            "settings": {
+              "info_heading": "Info",
+              "info__list-item": "contact@madeinuzbekistan.com"
+            }
+          }
+        },
+        "block_order": [
+          "43e2588f-11b0-4add-a528-fb9f1af47b4f",
+          "81616d29-a8e3-4d90-b4ff-098b4968ec1b"
+        ],
         "settings": {
           "color_scheme": "background-1",
           "newsletter_enable": true,
