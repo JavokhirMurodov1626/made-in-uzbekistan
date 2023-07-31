@@ -26,7 +26,7 @@
         "settings": {
           "color_scheme": "background-1",
           "logo_width": 100,
-          "logo_position": "middle-left",
+          "logo_position": "middle-center",
           "menu": "main-menu",
           "menu_type_desktop": "dropdown",
           "show_line_separator": true,
