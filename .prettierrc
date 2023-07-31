@@ -1,0 +1,10 @@
+{
+  "overrides": [
+    {
+      "files": "*.liquid",
+      "options": {
+        "parser": "liquid"
+      }
+    }
+  ]
+}

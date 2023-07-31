@@ -92,7 +92,7 @@
                           <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
                         </a>
                       </li>
-                    {%- endif -%}
+                    {%- endif -%}  
                     {%- if settings.social_tiktok_link != blank -%}
                       <li class="list-social__item">
                         <a href="{{ settings.social_tiktok_link }}" class="link list-social__link" >
@@ -136,7 +136,7 @@
                   </ul>
                 
                 {% when 'mission' %}
-                  <div>{{ block.settings.subtext }}}</div>
+                  <div>{{ block.settings.subtext }}</div>
                 {%- endcase -%}
             </div>
           {%- endfor -%}
