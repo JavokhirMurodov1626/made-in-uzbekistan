@@ -30,10 +30,8 @@
           "menu": "main-menu",
           "navbar-button-label": "Collections",
           "collection_list": [
-            "made-in-uzbekistan",
             "toshkent"
           ],
-          "menu_type_desktop": "dropdown",
           "show_line_separator": true,
           "enable_sticky_header": true,
           "mobile_logo_position": "center",
