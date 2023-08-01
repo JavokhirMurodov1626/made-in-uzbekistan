@@ -8,7 +8,7 @@
           "announcement-bar-0": {
             "type": "announcement",
             "settings": {
-              "text": "Welcome to our store",
+              "text": "Unlock a Made in Uzbekistan gift card and choose to give it to yourself, the planet or a loved one.",
               "text_alignment": "center",
               "color_scheme": "accent-1",
               "link": ""
@@ -30,10 +30,8 @@
           "menu": "main-menu",
           "navbar-button-label": "Collections",
           "collection_list": [
-            "made-in-uzbekistan",
             "toshkent"
           ],
-          "menu_type_desktop": "dropdown",
           "show_line_separator": true,
           "enable_sticky_header": true,
           "mobile_logo_position": "center",
