@@ -405,6 +405,11 @@
   margin-top: 1rem;
 }
 
+@media screen and (max-width: 426px) {
+  .banner__heading{
+    font-size:32px
+  }
+}
 .banner__buttons {
   display: inline-flex;
   flex-wrap: wrap;
