@@ -1,7 +1,7 @@
 {
   "sections": {
     "banner": {
-      "type": "main-collection-banner-alternate",
+      "type": "pmain-collection-banner-alternate",
       "settings": {
         "background_color": "#27ae60",
         "background_image": "shopify:\/\/shop_images\/Frame_3.png"
